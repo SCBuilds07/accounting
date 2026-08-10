@@ -1,0 +1,65 @@
+section#dashboard {
+    display: flex;
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top left,
+            rgba(0, 170, 255, .08),
+            transparent 35%),
+        linear-gradient(
+            160deg,
+            #eef4fa,
+            #f7f9fc 45%,
+            #edf2f8
+        );
+
+
+    .main-dashboard {
+        flex: 1;
+        padding: 45px;
+
+        h1 {
+            margin-bottom: 35px;
+
+            font-size: clamp(2rem,4vw,3rem);
+            font-weight: 800;
+
+            background: linear-gradient(
+                90deg,
+                #00304d,
+                #005bea,
+                #69bfff
+            );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        button {
+            padding: 14px 28px;
+
+            border: none;
+            border-radius: 14px;
+
+            background: linear-gradient(
+                90deg,
+                #005bea,
+                #00a8ff
+            );
+
+            color: white;
+            font-size: 15px;
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: .25s;
+
+            box-shadow: 0 8px 20px rgba(0,100,255,.25);
+
+            &:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 12px 28px rgba(0,100,255,.4);
+            }
+        }
+    }
+}

@@ -1,0 +1,122 @@
+header {
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(0, 180, 220, 0.15), transparent 30%),
+        radial-gradient(circle at 80% 80%, rgba(0, 80, 180, 0.25), transparent 40%),
+        linear-gradient(
+            160deg,
+            #000d1a,
+            #001f38 45%,
+            #00304d
+        );
+    color: white;
+    padding: 20px;
+    box-shadow: 0 4px 3px #00304d;
+    margin-bottom: 20px;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    background:
+        radial-gradient(
+            circle,
+            rgba(100, 220, 255, 0.08),
+            transparent 60%
+        );
+    top: -350px;
+    left: -150px;
+    filter: blur(50px);
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    bottom: -80px;
+    left: -10%;
+    width: 120%;
+    height: 180px;
+    background: rgba(0, 150, 220, 0.08);
+    border-radius: 50% 50% 0 0;
+    transform: rotate(-3deg);
+    filter: blur(8px);
+}
+
+header h1 {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 800;
+    letter-spacing: -1px;
+    background: linear-gradient(
+        90deg,
+        #b7e7ff,
+        #6fa8ff,
+        #0050c8
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow:
+        0 0 35px rgba(0, 140, 255, 0.25);
+    animation: floatIn 1s ease-out;
+}
+
+header h2 {
+    position: relative;
+    z-index: 2;
+    margin-top: 10px;
+    max-width: 700px;
+    font-size: clamp(1.1rem, 2vw, 1.6rem);
+    font-weight: 300;
+    letter-spacing: 0.8px;
+    color: rgba(220, 240, 255, 0.85);
+    animation: floatIn 1.2s ease-out;
+}
+
+header h2::after {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 4px;
+    margin: 25px auto 0;
+    border-radius: 20px;
+    background: linear-gradient(
+        90deg,
+        #005bea,
+        #70c9ff
+    );
+    box-shadow:
+        0 0 18px rgba(0, 140, 255, 0.7);
+}
+
+
+@keyframes floatIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        min-height: 350px;
+        padding: 25px;
+    }
+    header h2 {
+        line-height: 1.5;
+    }
+}

@@ -1,0 +1,135 @@
+#CrediteurenReview {
+  padding: 32px;
+  background: #f5f7fa;
+  min-height: 100vh;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  color: #1f2937;
+
+  h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: #111827;
+    border-bottom: 1px solid #d1d5db;
+    padding-bottom: 12px;
+  }
+
+  .pendingCrediteur {
+    background: white;
+    border: 1px solid #d9dee7;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+
+    transition: all 0.2s ease;
+
+    &:hover {
+      border-color: #9ca3af;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    li {
+      list-style: none;
+      padding: 16px 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      font-size: 15px;
+      font-weight: 500;
+      color: #374151;
+
+      background: #ffffff;
+
+      &:hover {
+        background: #f3f4f6;
+        color: #111827;
+      }
+
+      &::first-letter {
+        color: #2563eb;
+      }
+    }
+  }
+
+  .review {
+    border-top: 1px solid #e5e7eb;
+    background: #fafafa;
+
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+
+    p {
+      margin: 0;
+      padding: 10px 12px;
+
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+
+      font-size: 14px;
+
+      strong {
+        color: #111827;
+      }
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      margin-top: 16px;
+
+      button {
+        border: none;
+        padding: 10px 18px;
+        border-radius: 6px;
+
+        font-size: 14px;
+        font-weight: 500;
+
+        cursor: pointer;
+        transition: 0.2s ease;
+
+        &:hover {
+          transform: translateY(-1px);
+        }
+
+        &:active {
+          transform: translateY(0);
+        }
+
+        &:nth-child(1) {
+          background: #16a34a;
+          color: white;
+
+          &:hover {
+            background: #15803d;
+          }
+        }
+
+        &:nth-child(2) {
+          background: #f59e0b;
+          color: white;
+
+          &:hover {
+            background: #d97706;
+          }
+        }
+
+        &:nth-child(3) {
+          background: #dc2626;
+          color: white;
+
+          &:hover {
+            background: #b91c1c;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+section#add h1{
+    text-align: center;
+}
+
+section#add menu {
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 255, 0.247);
+    width: 400px;
+}
+
+section#add menu button{
+    width: 200px;
+    gap: 20px;
+    margin: 10px 0;
+}
+
+section#add article.add{
+    margin-top: 20px;
+}

@@ -1,0 +1,84 @@
+section#financieel{
+    display: flex;
+    min-height: 100vh;
+
+    div.main-financieel {
+        margin: 0 auto;
+        max-width: 600px;
+        width: 100%;
+
+        h1 {
+            background:
+                radial-gradient(circle at 20% 20%, rgba(0, 180, 220, 0.15), transparent 30%),
+                radial-gradient(circle at 80% 80%, rgba(0, 80, 180, 0.25), transparent 40%),
+                linear-gradient(
+                160deg,
+                #000d1a,
+                #001f38 45%,
+                #00304d
+            );
+            color: #fff;
+            margin-bottom: 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+
+            padding: 5px;
+            text-align: center;
+            font-size: 2.5rem;
+            box-shadow: 0 4px 3px #00304d;
+        }
+
+    div.financieel-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+
+        div.categorie {
+            flex: 1 1 280px;
+            max-width: 320px;
+
+            padding: 24px;
+            border: 1px solid black;
+            border-radius: 10px;
+            box-sizing: border-box;
+
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            
+            h2{
+                font-size: 1.3rem;
+                letter-spacing: 0.5px;
+            }
+
+            ul {
+                li{
+
+                    width: 120px;
+                    font-size: 1rem;
+                    color: rgb(28, 71, 227);
+                    list-style: none;
+                    transition: all 0.5s ease;
+
+                    span {
+                        display: none;
+                    }
+
+                    &:hover{
+                        display: flex;
+                        gap: 5px;
+                        transform: translateX(2px);
+                        cursor: pointer;
+
+                        span {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+}
