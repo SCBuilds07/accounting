@@ -1,8 +1,8 @@
 export const FINANCIEEL_CONFIG = {
     "Crediteuren": {
         koppen: [
-            { id: "Crediteuren", link: "/crediteuren" },
-            { id: `Review`, link: "/crediteuren-review" }
+            { id: "Crediteuren", link: "/financial/crediteuren" },
+            { id: `Review`, link: "/financial/crediteuren-review" }
         ],
     },
     "Dagboek": {

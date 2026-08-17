@@ -24,9 +24,9 @@ function App() {
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/dashboard/add" element={<Add />} />
                 <Route path="/dashboard/financial" element={<Financieel />} />
-                <Route path="/dashboard/crediteuren" element={<Crediteuren />} />
-                <Route path={"/dashboard/crediteuren-review"} element={<CrediteurenReview />} />
-                <Route path="/dashboard/crediteuren/add" element={<AddCrediteur />} />
+                <Route path="/dashboard/financial/crediteuren" element={<Crediteuren />} />
+                <Route path={"/dashboard/financial/crediteuren-review"} element={<CrediteurenReview />} />
+                <Route path="/dashboard/financial/crediteuren/add" element={<AddCrediteur />} />
 
             </Routes>
         </main>
