@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { fetchActiveCrediteuren, fetchCrediteurById } from "../../../api/crediteurenAPI"
 import { useNavigate } from "react-router-dom";
 import "./Crediteuren.scss"
+import Breadcrumbs from "../../../Breadcrumbs/Breadcrumbs.jsx";
 
 export default function Crediteuren() {
     const PAGE_SIZE = 5;
@@ -60,6 +61,7 @@ export default function Crediteuren() {
 
     return (    
         <section id="crediteuren">
+            <Breadcrumbs />
             <button onClick={() => navigate("./add")}>Aanmaken</button>
             <h1>Crediteuren</h1>
             {activeCrediteuren.slice(

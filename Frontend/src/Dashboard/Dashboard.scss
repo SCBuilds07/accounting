@@ -12,53 +12,60 @@ section#dashboard {
             #edf2f8
         );
 
+    main#dashboard-main {
+        margin: 0 auto;
+        width: 80%;
+        .business-logo {
+            width: 100%;
+            background: #0b3049;
+            height: fit-content;
+            align-items: center;
+            margin: 10px auto 30px;
+            border-radius: 30px;
 
-    .main-dashboard {
-        flex: 1;
-        padding: 45px;
+            h1 {
+                padding: 5px;
+                text-align: center;
+                font-size: clamp(2rem, 4vw, 3rem);
+                font-weight: 800;
 
-        h1 {
-            margin-bottom: 35px;
+                background: linear-gradient(
+                                90deg,
+                                #00304d,
+                                #005bea,
+                                #69bfff
+                );
 
-            font-size: clamp(2rem,4vw,3rem);
-            font-weight: 800;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
 
-            background: linear-gradient(
-                90deg,
-                #00304d,
-                #005bea,
-                #69bfff
-            );
-
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            p {
+                padding: 5px;
+                text-align: center;
+                color: white;
+            }
         }
 
-        button {
-            padding: 14px 28px;
+        .dashboard-grid {
+            display: grid;
 
-            border: none;
-            border-radius: 14px;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
 
-            background: linear-gradient(
-                90deg,
-                #005bea,
-                #00a8ff
-            );
+            gap: 25px;
 
-            color: white;
-            font-size: 15px;
-            font-weight: 600;
+            width: 100%;
 
-            cursor: pointer;
+            .dashboard-card {
+                text-align: center;
+                background: #6ab4e6;
+                padding: 10px;
+                border: 1px solid black;
+                border-radius: 10px;
 
-            transition: .25s;
-
-            box-shadow: 0 8px 20px rgba(0,100,255,.25);
-
-            &:hover {
-                transform: translateY(-3px);
-                box-shadow: 0 12px 28px rgba(0,100,255,.4);
+                h2{
+                    margin-top: -5px;
+                }
             }
         }
     }

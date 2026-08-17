@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Header from "../Header/Header";
+import Breadcrumbs from "../Breadcrumbs/Breadcrumbs.jsx"
 
 import "./Homepage.scss";
 import { useNavigate } from "react-router-dom";
