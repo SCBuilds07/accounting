@@ -1,0 +1,18 @@
+nav {
+  background: #858585;
+  width: fit-content;
+  padding: 15px;
+  margin: -15px 0 10px;
+  border-radius: 20px;
+    a {
+      color: white;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    span {
+      text-decoration: none;
+      color: white;
+    }
+}

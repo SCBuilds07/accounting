@@ -3,6 +3,7 @@ import {fetchCrediteurById, fetchPendingCrediteuren, fetchReviewableCrediteuren 
 import "./CrediteurenReview.scss"
 
 import ReviewList from "./review-list/ReviewList.jsx";
+import Breadcrumbs from "../../../../Breadcrumbs/Breadcrumbs.jsx";
 
 export default function CrediteurenReview() {
     const PAGE_SIZE = 5;
@@ -128,8 +129,9 @@ export default function CrediteurenReview() {
 
 
     return (
-        <section id="CrediteurenReview">
-            {activeList === "pending" ? <h1>Pending</h1> : <h1>Reviewable</h1>}
+    <section id="CrediteurenReview">
+        <Breadcrumbs />
+        {activeList === "pending" ? <h1>Pending</h1> : <h1>Reviewable</h1>}
             <div className="buttons">
                 <button
                     className={activeList === "pending" ? "active" : ""}
