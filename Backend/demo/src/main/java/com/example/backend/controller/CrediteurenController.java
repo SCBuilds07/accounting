@@ -45,7 +45,7 @@ public class CrediteurenController {
                 .map(BedrijfCrediteurResponse::new)
                 .toList();
 
-        System.out.println("Het werkt! YATTA!");
+        System.out.println("Het werkt! YATTA!!");
 
         return pendingCrediteuren;
     }
