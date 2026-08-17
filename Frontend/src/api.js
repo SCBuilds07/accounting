@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "http://scbuilds.nl:8080",
+    baseURL: "https://scbuilds.nl/api",
     withCredentials: true
 });
 
