@@ -22,4 +22,4 @@ jobs:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_ACCOUNTING_489F9 }}
           projectId: accounting-489f9
-          entryPoint: ./frontend
+          entryPoint: ./Frontend
