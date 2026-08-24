@@ -27,9 +27,6 @@ public class JWTUtil {
 
     public String generateToken(CustomUser customUser) throws IllegalArgumentException, JWTCreationException {
 
-        System.out.println("Token maken met secret: " + secret);
-
-
         String token = JWT.create()
                 .withSubject("User Details")
                 .withClaim("email", customUser.getEmail())
