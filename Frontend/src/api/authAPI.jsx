@@ -5,7 +5,7 @@ export async function login(loginForm) {
         const response = (await api.post("/auth/login", loginForm));
 
         localStorage.setItem("token", response.data.token);
-        localStorage.setItem("BedrijfNaam", response.data.bedrijf.name);
+        localStorage.setItem("BedrijfNaam", response.data.bedrijf?.name);
 
         return response.data;
     } catch (error) {
@@ -20,6 +20,17 @@ export async function fetchUserId() {
         return response.data;
     } catch (error) {
         throw new Error("Failed to fetch user_id");
+
+    }
+}
+
+export async function fetchAccountInformation() {
+    try {
+        const response = (await api.get("/auth/account"));
+
+        return response.data;
+    } catch (error) {
+        throw new Error("Failed to fetch user data");
 
     }
 }

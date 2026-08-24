@@ -84,6 +84,10 @@ div.sidebar {
         }
 
         .sidebar-content {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+
             transition:
                 opacity .25s,
                 transform .25s;
@@ -132,6 +136,24 @@ div.sidebar {
                         background: rgba(0,140,255,.18);
                         transform: translateX(8px);
                         box-shadow: 0 8px 18px rgba(0,0,0,.2);
+                    }
+                }
+            }
+            .account {
+                display: flex;
+                padding: 20px;
+                margin: auto -10px -5px;
+                border-top: 1px solid white;
+                gap: 20px;
+                align-items: center;
+
+                .account-content{
+                    h1{
+                        font-size: 16px;
+                    }
+
+                    p{
+                        font-size: 14px;
                     }
                 }
             }
