@@ -1,6 +1,7 @@
 package com.example.backend.controller;
 
 import com.example.backend.DAO.UserRepository;
+import com.example.backend.DTO.AccountDTO;
 import com.example.backend.DTO.AuthenticationDTO;
 import com.example.backend.DTO.LoginResponse;
 import com.example.backend.config.JWTUtil;
@@ -8,6 +9,7 @@ import com.example.backend.models.CustomUser;
 import com.example.backend.service.CredentialValidator;
 import com.example.backend.service.UserService;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseCookie;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -47,6 +49,7 @@ public class AuthController {
 
             CustomUser customUser = userRepository.findByEmail(body.email);
             String token = jwtUtil.generateToken(customUser);
+
             LoginResponse loginResponse = new LoginResponse(
                     customUser.getId(), customUser.getEmail(), token, customUser.getRole(), customUser.getBedrijf());
 
@@ -60,5 +63,10 @@ public class AuthController {
     @GetMapping("id")
     public Long getUserId() {
         return userService.getCurrentUserId();
+    }
+
+    @GetMapping("/account")
+    public AccountDTO getAccountInformation() {
+        return userService.getCurrentUserInformation();
     }
 }
