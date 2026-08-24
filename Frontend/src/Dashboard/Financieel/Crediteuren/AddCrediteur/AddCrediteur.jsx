@@ -10,6 +10,10 @@ export default function AddCrediteur() {
     const [enteredValues, setEnteredValues] = useState({
         name: "",
         email: "",
+        company: {
+            name: "",
+
+        }
     });
 
     function handleInputChange(identifier, value) {

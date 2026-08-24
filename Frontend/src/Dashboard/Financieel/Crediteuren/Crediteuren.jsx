@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react';
 import { fetchActiveCrediteuren, fetchCrediteurById } from "../../../api/crediteurenAPI"
 import { useNavigate } from "react-router-dom";
+
+import CrediteurInfo from "./Crediteur-info/CrediteurInfo.jsx"
 import "./Crediteuren.scss"
+
 import Breadcrumbs from "../../../Breadcrumbs/Breadcrumbs.jsx";
 
 export default function Crediteuren() {
@@ -83,11 +86,14 @@ export default function Crediteuren() {
                 )}
             </div>
 
-            <article id="selectedCrediteur">
-                {selectedCrediteur && (
-                    <p>{selectedCrediteur.bedrijfCrediteur.name} - {selectedCrediteur.bedrijfCrediteur.email}</p>
-                )}
-            </article>
+
+            {selectedCrediteur && (
+                <CrediteurInfo
+                    crediteur={selectedCrediteur}
+                    onClose={() => setSelectedCrediteur(null)}
+                />
+            )}
+
         </section>
     )
 }
