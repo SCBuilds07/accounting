@@ -5,7 +5,7 @@ public class AccountDTO {
     public String role;
 
     public AccountDTO(String email, String role) {
-        email = this.email;
-        role = this.role;
+        this.email = email;
+        this.role = role;
     }
 }
