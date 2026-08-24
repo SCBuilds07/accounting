@@ -1,6 +1,7 @@
 package com.example.backend.controller;
 
 import com.example.backend.DAO.UserRepository;
+import com.example.backend.DTO.AccountDTO;
 import com.example.backend.DTO.AuthenticationDTO;
 import com.example.backend.DTO.LoginResponse;
 import com.example.backend.config.JWTUtil;
@@ -60,5 +61,10 @@ public class AuthController {
     @GetMapping("id")
     public Long getUserId() {
         return userService.getCurrentUserId();
+    }
+
+    @GetMapping("/account")
+    public AccountDTO getAccountInformation() {
+        return userService.getCurrentUserInformation();
     }
 }
