@@ -1,78 +1,150 @@
-section#financieel{
+
+section#financieel {
     display: flex;
     min-height: 100vh;
+    max-width: 90vw;
+    margin-left: auto;
+
 
     div.main-financieel {
         margin: 0 auto;
-        max-width: 600px;
+        max-width: 1100px;
         width: 100%;
+        padding: 0 30px 50px;
 
         h1 {
             background:
-                radial-gradient(circle at 20% 20%, rgba(0, 180, 220, 0.15), transparent 30%),
-                radial-gradient(circle at 80% 80%, rgba(0, 80, 180, 0.25), transparent 40%),
-                linear-gradient(
-                160deg,
-                #000d1a,
-                #001f38 45%,
-                #00304d
-            );
-            color: #fff;
-            margin-bottom: 20px;
+                    linear-gradient(135deg, #15398c 0%, #6489da 100%);
+
+            color: #ffffff;
+
+            margin-bottom: 35px;
+
             border-bottom-left-radius: 20px;
             border-bottom-right-radius: 20px;
 
-            padding: 5px;
+            padding: 25px;
             text-align: center;
+
             font-size: 2.5rem;
-            box-shadow: 0 4px 3px #00304d;
+            font-weight: 800;
+            letter-spacing: -1px;
+
+            border: 1px solid #dbeafe;
+            border-top: none;
+
+            box-shadow:
+                    0 8px 25px rgba(0, 80, 180, .08);
         }
 
-    div.financieel-content {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 24px;
-
-        div.categorie {
-            flex: 1 1 280px;
-            max-width: 320px;
-
-            padding: 24px;
-            border: 1px solid black;
-            border-radius: 10px;
-            box-sizing: border-box;
-
+        // Content
+        div.financieel-content {
             display: flex;
-            flex-direction: column;
-            gap: 8px;
-            
-            h2{
-                font-size: 1.3rem;
-                letter-spacing: 0.5px;
-            }
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
 
-            ul {
-                li{
+            div.categorie {
+                flex: 1 1 280px;
+                max-width: 320px;
 
-                    width: 120px;
-                    font-size: 1rem;
-                    color: rgb(28, 71, 227);
-                    list-style: none;
-                    transition: all 0.5s ease;
+                padding: 26px;
 
-                    span {
-                        display: none;
-                    }
+                background: linear-gradient(
+                                145deg,
+                                #ffffff,
+                                #f0f6ff 75%,
+                                #e8f2ff
+                );
 
-                    &:hover{
+                border: 1px solid #c9e1ff;
+                border-radius: 16px;
+
+                box-sizing: border-box;
+
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+
+                box-shadow:
+                        0 10px 30px rgba(0, 80, 180, .07);
+
+                transition:
+                        transform .25s ease,
+                        box-shadow .25s ease,
+                        border-color .25s ease;
+
+                &:hover {
+                    transform: translateY(-4px);
+
+                    border-color: #93c5fd;
+
+                    box-shadow:
+                            0 15px 35px rgba(0, 80, 180, .12);
+                }
+
+                // Categorie titel
+                h2 {
+                    font-size: 1.3rem;
+                    font-weight: 700;
+                    letter-spacing: .3px;
+
+                    color: #001f38;
+
+                    padding-bottom: 12px;
+                    border-bottom: 1px solid #dbeafe;
+                }
+
+                // Menu items
+                ul {
+                    padding: 0;
+                    margin: 0;
+
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+
+                    li {
                         display: flex;
+                        align-items: center;
                         gap: 5px;
-                        transform: translateX(2px);
-                        cursor: pointer;
+
+                        width: 100%;
+                        box-sizing: border-box;
+
+                        padding: 11px 12px;
+
+                        font-size: 14px;
+                        font-weight: 500;
+
+                        color: #475569;
+
+                        list-style: none;
+                        border-radius: 10px;
+
+                        transition: all .25s ease;
 
                         span {
                             display: block;
+                            color: #008cff;
+
+                            opacity: 0;
+                            transform: translateX(-4px);
+
+                            transition: all .25s ease;
+                        }
+
+                        &:hover {
+                            background: #e0efff;
+                            color: #0878d1;
+
+                            transform: translateX(4px);
+                            cursor: pointer;
+
+                            span {
+                                opacity: 1;
+                                transform: translateX(0);
+                            }
                         }
                     }
                 }
@@ -81,4 +153,23 @@ section#financieel{
     }
 }
 
+// Responsive
+@media (max-width: 700px) {
+    section#financieel {
+        div.main-financieel {
+            padding: 0 15px 35px;
+
+            h1 {
+                font-size: 2rem;
+                padding: 20px;
+            }
+
+            div.financieel-content {
+                div.categorie {
+                    flex: 1 1 100%;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
 }

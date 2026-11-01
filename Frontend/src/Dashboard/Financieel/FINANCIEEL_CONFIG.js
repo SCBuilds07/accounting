@@ -19,20 +19,11 @@ export const FINANCIEEL_CONFIG = {
     },
     "Facturen": {
         koppen: [
-            { id: "Openstaande", link: "#" },
-            { id: "Afgekeurde", link: "#" },
-            { id: "Postbus", link: "#" },
-            { id: "Beoordelen", rol: "Admin" ,link: "#" },
-            { id: "Archief", link: "#" },
-
+            { id: "Openstaande", link: "/financial/facturen" },
+            { id: "Afgekeurde", link: "/financial/facturen/afgekeurd" },
+            { id: "Postbus", link: "/financial/facturen/postbus" },
+            { id: "Beoordelen", link: "/financial/facturen/beoordelen" },
+            { id: "Archief", link: "/financial/facturen/archief"},
         ],
     }
 }
-
-// "ENGELS": {
-//     inlogKop: "THIS IS A LOGIN"
-// }
-//
-// "NL": {
-//     inlogKop: "DIT IS EEN LOGIN"
-// }

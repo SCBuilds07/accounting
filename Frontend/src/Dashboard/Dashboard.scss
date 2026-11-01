@@ -1,6 +1,8 @@
 section#dashboard {
     display: flex;
     min-height: 100vh;
+    max-width: 90vw;
+    margin-left: auto;
     background:
         radial-gradient(circle at top left,
             rgba(0, 170, 255, .08),
